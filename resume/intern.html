@@ -1,0 +1,1859 @@
+<!DOCTYPE html>
+<html data-country="TW" lang="zh-TW">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta content="IE=edge" http-equiv="X-UA-Compatible">
+  <script src="./assets/nr-1071.min.js"></script>
+  <script type="text/javascript" async="" src="./assets/runtime.2.10.0.1.js"></script>
+  <script async="" src="./assets/script.js"></script>
+  <script type="text/javascript" async="" src="./assets/mixpanel-2-latest.min.js"></script>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {});
+    NREUM.info = {
+      "beacon": "bam.nr-data.net",
+      "errorBeacon": "bam.nr-data.net",
+      "licenseKey": "4c861a65fa",
+      "applicationID": "10977091",
+      "transactionName": "d1hZQUYJD1sAFkpaQFFaRBpHDgxA",
+      "queueTime": 3,
+      "applicationTime": 186,
+      "agent": ""
+    }
+  </script>
+  <script type="text/javascript">
+    window.NREUM || (NREUM = {}), __nr_require = function (e, t, n) {
+      function r(n) {
+        if (!t[n]) {
+          var o = t[n] = {
+            exports: {}
+          };
+          e[n][0].call(o.exports, function (t) {
+            var o = e[n][1][t];
+            return r(o || t)
+          }, o, o.exports)
+        }
+        return t[n].exports
+      }
+      if ("function" == typeof __nr_require) return __nr_require;
+      for (var o = 0; o < n.length; o++) r(n[o]);
+      return r
+    }({
+      1: [function (e, t, n) {
+        function r() {}
+
+        function o(e, t, n) {
+          return function () {
+            return i(e, [f.now()].concat(u(arguments)), t ? null : this, n), t ? void 0 : this
+          }
+        }
+        var i = e("handle"),
+          a = e(2),
+          u = e(3),
+          c = e("ee").get("tracer"),
+          f = e("loader"),
+          s = NREUM;
+        "undefined" == typeof window.newrelic && (newrelic = s);
+        var p = ["setPageViewName", "setCustomAttribute", "setErrorHandler", "finished", "addToTrace",
+            "inlineHit", "addRelease"
+          ],
+          d = "api-",
+          l = d + "ixn-";
+        a(p, function (e, t) {
+            s[t] = o(d + t, !0, "api")
+          }), s.addPageAction = o(d + "addPageAction", !0), s.setCurrentRouteName = o(d + "routeName", !0), t.exports =
+          newrelic, s.interaction = function () {
+            return (new r).get()
+          };
+        var m = r.prototype = {
+          createTracer: function (e, t) {
+            var n = {},
+              r = this,
+              o = "function" == typeof t;
+            return i(l + "tracer", [f.now(), e, n], r),
+              function () {
+                if (c.emit((o ? "" : "no-") + "fn-start", [f.now(), r, o], n), o) try {
+                  return t.apply(this, arguments)
+                } catch (e) {
+                  throw c.emit("fn-err", [arguments, this, e], n), e
+                } finally {
+                  c.emit("fn-end", [f.now()], n)
+                }
+              }
+          }
+        };
+        a("setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","), function (e, t) {
+          m[t] = o(l + t)
+        }), newrelic.noticeError = function (e) {
+          "string" == typeof e && (e = new Error(e)), i("err", [e, f.now()])
+        }
+      }, {}],
+      2: [function (e, t, n) {
+        function r(e, t) {
+          var n = [],
+            r = "",
+            i = 0;
+          for (r in e) o.call(e, r) && (n[i] = t(r, e[r]), i += 1);
+          return n
+        }
+        var o = Object.prototype.hasOwnProperty;
+        t.exports = r
+      }, {}],
+      3: [function (e, t, n) {
+        function r(e, t, n) {
+          t || (t = 0), "undefined" == typeof n && (n = e ? e.length : 0);
+          for (var r = -1, o = n - t || 0, i = Array(o < 0 ? 0 : o); ++r < o;) i[r] = e[t + r];
+          return i
+        }
+        t.exports = r
+      }, {}],
+      4: [function (e, t, n) {
+        t.exports = {
+          exists: "undefined" != typeof window.performance && window.performance.timing && "undefined" !=
+            typeof window.performance.timing.navigationStart
+        }
+      }, {}],
+      ee: [function (e, t, n) {
+        function r() {}
+
+        function o(e) {
+          function t(e) {
+            return e && e instanceof r ? e : e ? c(e, u, i) : i()
+          }
+
+          function n(n, r, o, i) {
+            if (!d.aborted || i) {
+              e && e(n, r, o);
+              for (var a = t(o), u = m(n), c = u.length, f = 0; f < c; f++) u[f].apply(a, r);
+              var p = s[y[n]];
+              return p && p.push([b, n, r, a]), a
+            }
+          }
+
+          function l(e, t) {
+            v[e] = m(e).concat(t)
+          }
+
+          function m(e) {
+            return v[e] || []
+          }
+
+          function w(e) {
+            return p[e] = p[e] || o(n)
+          }
+
+          function g(e, t) {
+            f(e, function (e, n) {
+              t = t || "feature", y[n] = t, t in s || (s[t] = [])
+            })
+          }
+          var v = {},
+            y = {},
+            b = {
+              on: l,
+              emit: n,
+              get: w,
+              listeners: m,
+              context: t,
+              buffer: g,
+              abort: a,
+              aborted: !1
+            };
+          return b
+        }
+
+        function i() {
+          return new r
+        }
+
+        function a() {
+          (s.api || s.feature) && (d.aborted = !0, s = d.backlog = {})
+        }
+        var u = "nr@context",
+          c = e("gos"),
+          f = e(2),
+          s = {},
+          p = {},
+          d = t.exports = o();
+        d.backlog = s
+      }, {}],
+      gos: [function (e, t, n) {
+        function r(e, t, n) {
+          if (o.call(e, t)) return e[t];
+          var r = n();
+          if (Object.defineProperty && Object.keys) try {
+            return Object.defineProperty(e, t, {
+              value: r,
+              writable: !0,
+              enumerable: !1
+            }), r
+          } catch (i) {}
+          return e[t] = r, r
+        }
+        var o = Object.prototype.hasOwnProperty;
+        t.exports = r
+      }, {}],
+      handle: [function (e, t, n) {
+        function r(e, t, n, r) {
+          o.buffer([e], r), o.emit(e, t, n)
+        }
+        var o = e("ee").get("handle");
+        t.exports = r, r.ee = o
+      }, {}],
+      id: [function (e, t, n) {
+        function r(e) {
+          var t = typeof e;
+          return !e || "object" !== t && "function" !== t ? -1 : e === window ? 0 : a(e, i, function () {
+            return o++
+          })
+        }
+        var o = 1,
+          i = "nr@id",
+          a = e("gos");
+        t.exports = r
+      }, {}],
+      loader: [function (e, t, n) {
+        function r() {
+          if (!x++) {
+            var e = h.info = NREUM.info,
+              t = d.getElementsByTagName("script")[0];
+            if (setTimeout(s.abort, 3e4), !(e && e.licenseKey && e.applicationID && t)) return s.abort();
+            f(y, function (t, n) {
+              e[t] || (e[t] = n)
+            }), c("mark", ["onload", a() + h.offset], null, "api");
+            var n = d.createElement("script");
+            n.src = "https://" + e.agent, t.parentNode.insertBefore(n, t)
+          }
+        }
+
+        function o() {
+          "complete" === d.readyState && i()
+        }
+
+        function i() {
+          c("mark", ["domContent", a() + h.offset], null, "api")
+        }
+
+        function a() {
+          return E.exists && performance.now ? Math.round(performance.now()) : (u = Math.max((new Date).getTime(),
+            u)) - h.offset
+        }
+        var u = (new Date).getTime(),
+          c = e("handle"),
+          f = e(2),
+          s = e("ee"),
+          p = window,
+          d = p.document,
+          l = "addEventListener",
+          m = "attachEvent",
+          w = p.XMLHttpRequest,
+          g = w && w.prototype;
+        NREUM.o = {
+          ST: setTimeout,
+          SI: p.setImmediate,
+          CT: clearTimeout,
+          XHR: w,
+          REQ: p.Request,
+          EV: p.Event,
+          PR: p.Promise,
+          MO: p.MutationObserver
+        };
+        var v = "" + location,
+          y = {
+            beacon: "bam.nr-data.net",
+            errorBeacon: "bam.nr-data.net",
+            agent: "js-agent.newrelic.com/nr-1071.min.js"
+          },
+          b = w && g && g[l] && !/CriOS/.test(navigator.userAgent),
+          h = t.exports = {
+            offset: u,
+            now: a,
+            origin: v,
+            features: {},
+            xhrWrappable: b
+          };
+        e(1), d[l] ? (d[l]("DOMContentLoaded", i, !1), p[l]("load", r, !1)) : (d[m]("onreadystatechange", o), p[
+          m]("onload", r)), c("mark", ["firstbyte", u], null, "api");
+        var x = 0,
+          E = e(4)
+      }, {}]
+    }, {}, ["loader"]);
+  </script>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+  <title>KaiYi's Resume</title>
+  <meta name="description" content="目前是精藤股份有限公司的實習生，負責電腦維修，並同時學習網路規劃。">
+  <meta name="robots" content="noindex, nofollow">
+  <meta property="og:title" content="KaiYi's Resume">
+  <meta property="og:description" content="目前是精藤股份有限公司的實習生，負責電腦維修，並同時學習網路規劃。">
+  <meta property="og:type" content="profile">
+  <meta property="fb:app_id" content="1082948111745623">
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="KaiYi's Resume">
+  <meta name="twitter:description" content="目前是精藤股份有限公司的實習生，負責電腦維修，並同時學習網路規劃。">
+  <link rel="stylesheet" media="screen" href="./assets/fonts.css">
+  <link rel="stylesheet" media="all" href="./assets/main-561d483b84966d1d267c4e1dfc5b890534e369e6c88838b1503efdb2cafef80c.css"
+    data-turbolinks-track="true">
+
+  <script src="./assets/contentarea-aaf3649b99bea8faee3dffc363079c4d7de7ee8c34c5947c03ac7ac0e467a5a7.js"
+    data-turbolinks-track="true"></script>
+  <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+  <!-- Mixpanel -->
+  <script type="text/javascript">
+    (function (e, a) {
+      if (!a.__SV) {
+        var b = window;
+        try {
+          var c, l, i, j = b.location,
+            g = j.hash;
+          c = function (a, b) {
+            return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
+          };
+          g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage
+            .setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
+        } catch (m) {}
+        var k, h;
+        window.mixpanel = a;
+        a._i = [];
+        a.init = function (b, c, f) {
+          function e(b, a) {
+            var c = a.split(".");
+            2 == c.length && (b = b[c[0]], a = c[1]);
+            b[a] = function () {
+              b.push([a].concat(Array.prototype.slice.call(arguments,
+                0)))
+            }
+          }
+          var d = a;
+          "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
+          d.people = d.people || [];
+          d.toString = function (b) {
+            var a = "mixpanel";
+            "mixpanel" !== f && (a += "." + f);
+            b || (a += " (stub)");
+            return a
+          };
+          d.people.toString = function () {
+            return d.toString(1) + ".people (stub)"
+          };
+          k =
+            "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
+            .split(" ");
+          for (h = 0; h < k.length; h++) e(d, k[h]);
+          a._i.push([b, c, f])
+        };
+        a.__SV = 1.2;
+        b = e.createElement("script");
+        b.type = "text/javascript";
+        b.async = !0;
+        b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol &&
+          "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
+          "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
+        c = e.getElementsByTagName("script")[0];
+        c.parentNode.insertBefore(b, c)
+      }
+    })(document, window.mixpanel || []);
+    mixpanel.init("9cd3a919409eb3bd2aa39f8c634df985");
+  </script>
+  <!-- End Mixpanel -->
+
+
+  <!-- My Segment -->
+  <script type="text/javascript">
+    (function (window) {
+      var keyMap, segmentTraitsToMixpanel;
+
+      keyMap = {
+        created: '$created',
+        email: '$email',
+        firstName: '$first_name',
+        lastName: '$last_name',
+        name: '$name',
+        username: '$username',
+        phone: '$phone',
+        unsubscribed: '$unsubscribed',
+      };
+
+      segmentTraitsToMixpanel = function (dict) {
+        return _.reduce(dict, function (newDict, val, oldKey) {
+          var newKey;
+          newKey = keyMap[oldKey] || oldKey;
+          newDict[newKey] = val;
+          return newDict;
+        }, {});
+      };
+
+      window.analytics = {
+        identify: function (userId, traits) {
+          if (traits == null) {
+            traits = {};
+          }
+          mixpanel.identify(userId);
+          mixpanel.people.set(segmentTraitsToMixpanel(traits));
+          ga('set', 'userId', userId);
+        },
+        alias: function (userId) {
+          mixpanel.alias(userId);
+        },
+        track: function (event, properties) {
+          mixpanel.track(event, properties);
+
+          // ga
+          if (properties.nonInteraction) {
+            ga('send', 'event', properties.category, event, properties.label, properties.value, {
+              nonInteraction: 1
+            });
+          } else {
+            ga('send', 'event', properties.category, event, properties.label, properties.value);
+          }
+
+          // fbq
+          if (event == 'Complete registration') {
+            // Track standard event.
+            fbq('track', 'CompleteRegistration', properties)
+          } else {
+            // Track custom event.
+            fbq('trackCustom', event, properties)
+          }
+        },
+        page: function () {
+          mixpanel.track('Loaded a Page');
+          ga('send', 'pageview');
+          fbq('track', 'PageView');
+        }
+      };
+    })(window);
+  </script>
+
+  <style type="text/css">
+    @font-face {
+      font-family: gsc;
+      src: url(//st.getsitecontrol.com/main/widgets/201805/880e3ccdd6e2e86978b57f0ddb45775c/common/fonts/gsc.eot?) format('embedded-opentype');
+      font-weight: 400;
+      font-style: normal
+    }
+
+    @font-face {
+      font-family: gsc;
+      src: url(data:application/octet-stream;base64,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) format('truetype');
+      font-weight: 400;
+      font-style: normal
+    }
+
+    @font-face {
+      font-family: emoji;
+      src: local('Apple Color Emoji'), local('Android Emoji'), local('Segoe UI'), local(EmojiSymbols), local(Symbola);
+      unicode-range: U+1F300-1F5FF, U+1F600-1F64F, U+1F680-1F6FF, U+2600-26FF
+    }
+
+    @-webkit-keyframes gscw-bounceInLeft {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(-3000px, 0);
+        transform: translate(-3000px, 0)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(35px, 0);
+        transform: translate(35px, 0)
+      }
+
+      65% {
+        -webkit-transform: translate(-15px, 0);
+        transform: translate(-15px, 0)
+      }
+
+      90% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-bounceInLeft {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(-3000px, 0);
+        transform: translate(-3000px, 0)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(35px, 0);
+        transform: translate(35px, 0)
+      }
+
+      65% {
+        -webkit-transform: translate(-15px, 0);
+        transform: translate(-15px, 0)
+      }
+
+      90% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceInRight {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(3000px, 0);
+        transform: translate(3000px, 0)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(-35px, 0);
+        transform: translate(-35px, 0)
+      }
+
+      65% {
+        -webkit-transform: translate(15px, 0);
+        transform: translate(15px, 0)
+      }
+
+      90% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-bounceInRight {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(3000px, 0);
+        transform: translate(3000px, 0)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(-35px, 0);
+        transform: translate(-35px, 0)
+      }
+
+      65% {
+        -webkit-transform: translate(15px, 0);
+        transform: translate(15px, 0)
+      }
+
+      90% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceInUp {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 700px);
+        transform: translate(0, 700px)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(0, -35px);
+        transform: translate(0, -35px)
+      }
+
+      65% {
+        -webkit-transform: translate(0, 15px);
+        transform: translate(0, 15px)
+      }
+
+      90% {
+        -webkit-transform: translate(0, -5px);
+        transform: translate(0, -5px)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-bounceInUp {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 700px);
+        transform: translate(0, 700px)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(0, -35px);
+        transform: translate(0, -35px)
+      }
+
+      65% {
+        -webkit-transform: translate(0, 15px);
+        transform: translate(0, 15px)
+      }
+
+      90% {
+        -webkit-transform: translate(0, -5px);
+        transform: translate(0, -5px)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceInDown {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, -700px);
+        transform: translate(0, -700px)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(0, 35px);
+        transform: translate(0, 35px)
+      }
+
+      65% {
+        -webkit-transform: translate(0, -15px);
+        transform: translate(0, -15px)
+      }
+
+      90% {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-bounceInDown {
+
+      0%,
+      100%,
+      40%,
+      65%,
+      90% {
+        transition-timing-function: cubic-bezier(.215, .61, .355, 1)
+      }
+
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, -700px);
+        transform: translate(0, -700px)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: translate(0, 35px);
+        transform: translate(0, 35px)
+      }
+
+      65% {
+        -webkit-transform: translate(0, -15px);
+        transform: translate(0, -15px)
+      }
+
+      90% {
+        -webkit-transform: translate(0, 5px);
+        transform: translate(0, 5px)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceOutLeft {
+      20% {
+        opacity: 1;
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0)
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate(-2000px, 0);
+        transform: translate(-2000px, 0)
+      }
+    }
+
+    @keyframes gscw-bounceOutLeft {
+      20% {
+        opacity: 1;
+        -webkit-transform: translate(20px, 0);
+        transform: translate(20px, 0)
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate(-2000px, 0);
+        transform: translate(-2000px, 0)
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceOutRight {
+      20% {
+        opacity: 1;
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0)
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate(2000px, 0);
+        transform: translate(2000px, 0)
+      }
+    }
+
+    @keyframes gscw-bounceOutRight {
+      20% {
+        opacity: 1;
+        -webkit-transform: translate(-20px, 0);
+        transform: translate(-20px, 0)
+      }
+
+      100% {
+        opacity: 0;
+        -webkit-transform: translate(2000px, 0);
+        transform: translate(2000px, 0)
+      }
+    }
+
+    @-webkit-keyframes gscw-slideOutLeft {
+      100% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+      }
+    }
+
+    @keyframes gscw-slideOutLeft {
+      100% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+      }
+    }
+
+    @-webkit-keyframes gscw-slideOutRight {
+      100% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+      }
+    }
+
+    @keyframes gscw-slideOutRight {
+      100% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+      }
+    }
+
+    @-webkit-keyframes gscw-slideInLeft {
+      0% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-slideInLeft {
+      0% {
+        -webkit-transform: translate(-100%, 0);
+        transform: translate(-100%, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-slideInRight {
+      0% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-slideInRight {
+      0% {
+        -webkit-transform: translate(100%, 0);
+        transform: translate(100%, 0)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeIn {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    @keyframes gscw-fadeIn {
+      0% {
+        opacity: 0
+      }
+
+      100% {
+        opacity: 1
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeInLeft {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(-60%, 0);
+        transform: translate(-60%, 0)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-fadeInLeft {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(-60%, 0);
+        transform: translate(-60%, 0)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeInRight {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(60%, 0);
+        transform: translate(60%, 0)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-fadeInRight {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(60%, 0);
+        transform: translate(60%, 0)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeInUp {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 60%);
+        transform: translate(0, 60%)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-fadeInUp {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, 60%);
+        transform: translate(0, 60%)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeInDown {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, -60%);
+        transform: translate(0, -60%)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-fadeInDown {
+      0% {
+        opacity: 0;
+        -webkit-transform: translate(0, -60%);
+        transform: translate(0, -60%)
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-fadeOut {
+      0% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @keyframes gscw-fadeOut {
+      0% {
+        opacity: 1
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @-webkit-keyframes gscw-zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-zoomIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      50% {
+        opacity: 1
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-zoomOut {
+      0% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @keyframes gscw-zoomOut {
+      0% {
+        opacity: 1
+      }
+
+      50% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      100% {
+        opacity: 0
+      }
+    }
+
+    @-webkit-keyframes gscw-swing {
+      0% {
+        opacity: 0
+      }
+
+      20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg)
+      }
+
+      60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg)
+      }
+
+      80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg)
+      }
+
+      100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg)
+      }
+    }
+
+    @keyframes gscw-swing {
+      0% {
+        opacity: 0
+      }
+
+      20% {
+        -webkit-transform: rotate3d(0, 0, 1, 15deg);
+        transform: rotate3d(0, 0, 1, 15deg)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: rotate3d(0, 0, 1, -10deg);
+        transform: rotate3d(0, 0, 1, -10deg)
+      }
+
+      60% {
+        -webkit-transform: rotate3d(0, 0, 1, 5deg);
+        transform: rotate3d(0, 0, 1, 5deg)
+      }
+
+      80% {
+        -webkit-transform: rotate3d(0, 0, 1, -5deg);
+        transform: rotate3d(0, 0, 1, -5deg)
+      }
+
+      100% {
+        -webkit-transform: rotate3d(0, 0, 1, 0deg);
+        transform: rotate3d(0, 0, 1, 0deg)
+      }
+    }
+
+    @-webkit-keyframes gscw-bounceIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      30% {
+        -webkit-transform: scale(1.3, 1.3);
+        transform: scale(1.3, 1.3)
+      }
+
+      55% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8)
+      }
+
+      72% {
+        -webkit-transform: scale(1.13, 1.13);
+        transform: scale(1.13, 1.13)
+      }
+
+      87% {
+        -webkit-transform: scale(.97, .97);
+        transform: scale(.97, .97)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-bounceIn {
+      0% {
+        opacity: 0;
+        -webkit-transform: scale(.3, .3);
+        transform: scale(.3, .3)
+      }
+
+      30% {
+        -webkit-transform: scale(1.3, 1.3);
+        transform: scale(1.3, 1.3)
+      }
+
+      55% {
+        opacity: 1;
+        -webkit-transform: scale(.8, .8);
+        transform: scale(.8, .8)
+      }
+
+      72% {
+        -webkit-transform: scale(1.13, 1.13);
+        transform: scale(1.13, 1.13)
+      }
+
+      87% {
+        -webkit-transform: scale(.97, .97);
+        transform: scale(.97, .97)
+      }
+
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-flipTy {
+      0% {
+        transition-timing-function: ease-in;
+        -webkit-transform: rotateY(180deg) scale(.4, .4);
+        transform: rotateY(180deg) scale(.4, .4)
+      }
+
+      100% {
+        -webkit-transform: rotateY(0) scale(1, 1);
+        transform: rotateY(0) scale(1, 1)
+      }
+    }
+
+    @keyframes gscw-flipTy {
+      0% {
+        transition-timing-function: ease-in;
+        -webkit-transform: rotateY(180deg) scale(.4, .4);
+        transform: rotateY(180deg) scale(.4, .4)
+      }
+
+      100% {
+        -webkit-transform: rotateY(0) scale(1, 1);
+        transform: rotateY(0) scale(1, 1)
+      }
+    }
+
+    @-webkit-keyframes gscw-flip {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg)
+      }
+
+      100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0)
+      }
+    }
+
+    @keyframes gscw-flip {
+      0% {
+        -webkit-transform: rotateY(180deg);
+        transform: rotateY(180deg)
+      }
+
+      100% {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0)
+      }
+    }
+
+    @-webkit-keyframes gscw-typing {
+
+      0%,
+      100%,
+      80% {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+
+    @keyframes gscw-typing {
+
+      0%,
+      100%,
+      80% {
+        opacity: 0;
+        -webkit-transform: scale(.8);
+        transform: scale(.8)
+      }
+
+      40% {
+        opacity: 1;
+        -webkit-transform: scale(1);
+        transform: scale(1)
+      }
+    }
+
+    @-webkit-keyframes gscw-notify {
+      0% {
+        -webkit-transform: scale(.1, .1);
+        transform: scale(.1, .1);
+        opacity: .3
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @keyframes gscw-notify {
+      0% {
+        -webkit-transform: scale(.1, .1);
+        transform: scale(.1, .1);
+        opacity: .3
+      }
+
+      100% {
+        opacity: 1;
+        -webkit-transform: none;
+        transform: none
+      }
+    }
+
+    @-webkit-keyframes gscw-highlight {
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+
+      0%,
+      99% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+      }
+
+      20% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0)
+      }
+
+      60% {
+        -webkit-transform: translate(-2.5px, 0);
+        transform: translate(-2.5px, 0)
+      }
+
+      40% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0)
+      }
+
+      80% {
+        -webkit-transform: translate(2.5px, 0);
+        transform: translate(2.5px, 0)
+      }
+    }
+
+    @keyframes gscw-highlight {
+      100% {
+        -webkit-transform: none;
+        transform: none
+      }
+
+      0%,
+      99% {
+        -webkit-transform: translate(0, 0);
+        transform: translate(0, 0)
+      }
+
+      20% {
+        -webkit-transform: translate(-5px, 0);
+        transform: translate(-5px, 0)
+      }
+
+      60% {
+        -webkit-transform: translate(-2.5px, 0);
+        transform: translate(-2.5px, 0)
+      }
+
+      40% {
+        -webkit-transform: translate(5px, 0);
+        transform: translate(5px, 0)
+      }
+
+      80% {
+        -webkit-transform: translate(2.5px, 0);
+        transform: translate(2.5px, 0)
+      }
+    }
+
+    body.getvym6 {
+      overflow: hidden !important
+    }
+
+    html.gdob01k,
+    html.gdob01k>body {
+      overflow: hidden !important
+    }
+
+    .g-o5wxhk {
+      cursor: pointer
+    }
+
+    body.g3qz9z7:before {
+      transition: height .5s cubic-bezier(.455, .03, .515, .955);
+      content: ' ';
+      display: block;
+      visibility: hidden;
+      height: 0 !important;
+      padding: 0;
+      margin: 0
+    }
+
+    .g-t2itfi.g3qz9z7:before {
+      transition: none !important
+    }
+
+    body.g3qz9z7.gq115de:before {
+      height: 42px !important
+    }
+
+    body.g3qz9z7.g2fo7tt:before {
+      transition: none !important
+    }
+
+    w-div {
+      display: block;
+      vertical-align: inherit
+    }
+
+    .gww36jl,
+    .g-r0l8g6 {
+      -webkit-animation-name: gscw-highlight !important;
+      animation-name: gscw-highlight !important;
+      -webkit-animation-duration: .6s !important;
+      animation-duration: .6s !important;
+      -webkit-font-smoothing: subpixel-antialiased;
+      -webkit-transform-origin: left;
+      -ms-transform-origin: left;
+      transform-origin: left
+    }
+
+    .g-rhgybb {
+      position: absolute;
+      top: -9999px;
+      width: 50px;
+      height: 50px;
+      overflow: scroll
+    }
+
+    .g2fo7tt * {
+      transition: none !important
+    }
+  </style>
+  <script type="text/javascript" charset="utf-8" async="" src="./assets/layers.19562ea85278f66bc3c0.js"></script>
+
+  <link href="./assets/css" rel="stylesheet">
+</head><span id="warning-container"><i data-reactroot=""></i></span>
+
+<body class="is-owner paper-style" id="items-show">
+  <div class="container-main container">
+    <div id="alerts"></div>
+    <div id="global-status-container">
+      <div id="global-status"></div>
+    </div>
+    <div class="item-page">
+      <div class="contentarea" id="item" notranslate="">
+        <div class="row snippet-profile-001">
+          <div class="col-sm-2"><img data-no-retina="true" src="./assets/82ad248f-983b-44a9-be3f-843ef17f5d66.png" alt="Profile 00 00@2x e294063b2878e4164ba1dd904aa6b8bae6a97e19937899e4b4af853acf30de5d"
+              style="border-radius: 0px;"></div>
+          <div class="col-sm-10">
+            <h1 style="color: rgb(136, 136, 136);"><span style="font-weight: bold; color: rgb(149, 87, 5);">張楷翊</span></h1>
+            <p>元智大學資管系</p>
+            <p>元智大學資訊研究社&nbsp; 4th 社長</p>
+            <p>元智大學男二宿　網管 (2016.07 ~ 2018.06)</p>
+            <p>精藤股份有限公司 實習生 (2018.02 ~ )</p>
+            <p><br></p>
+            <p><b>電子郵件：</b>oschangkai@gmail.com<br></p>
+            <p><b>個人網站：</b>https://kaiyeee.tw</p>
+          </div>
+        </div>
+        <div class="row snippet-features-001">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1><b style="color: rgb(149, 87, 5);">專業技能</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-sm-12 item">
+                <p></p>
+                <ul style="line-height: 28px;">
+                  <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">作業系統：</b>Windows, Windows Server,
+                      Linux, macOS</span></li>
+                  <li style="font-size: 16px;"><b>程式語言：</b><span style="font-size: 16px;">C++, C#, ASP.NET, Python,
+                      Javascript (React.js, Vue.js), PHP (不熟)</span></li>
+                  <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">資料庫：</b>MS SQL, MariaDB (MySQL)</span></li>
+                  <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">PaaS 服務使用經驗：</b><span style="font-size: 16px;">Heroku,
+                      Openshift</span></li>
+                  <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">虛擬化軟體：</b>VMware Workstation /
+                      ESXi / Fusion, Microsoft Hyper-V&nbsp;</span><br></li>
+                  <li style="font-size: 16px;"><span style="font-size: 16px;"><b>其他：</b>Git 版控、硬體組裝 / 測試 / 除錯、簡易網路規劃 /
+                      架設、網站維護 / 架設<br></span></li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-features-001">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1><b style="color: rgb(149, 87, 5);">教育狀況</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-sm-12 item">
+                <ul style="line-height: 28px;">
+                  <li><span style="font-size: 16px;">2015 年 9 月－目前　元智大學資管系三年級<br></span></li>
+                  <li><span style="font-size: 16px;">平均成績：80 ，約在班排名前 9%<br></span></li>
+                  <ul>
+                    <li><span style="font-size: 16px;"><b>Web 相關</b><br></span></li>
+                    <ul>
+                      <li><span style="font-size: 16px;">網頁設計概論：99</span></li>
+                      <li><span style="font-size: 16px;">網際網路程式設計：93</span></li>
+                      <li><span style="font-size: 16px;">資料庫管理：80<br></span></li>
+                    </ul>
+                    <li><span style="font-size: 16px;"><b>網路相關 (CCNA)</b><br></span></li>
+                    <ul>
+                      <li><span style="font-size: 16px;">資訊網路：95</span></li>
+                      <li><span style="font-size: 16px;">網路實習 (一)：90<br></span></li>
+                    </ul>
+                    <li><span style="font-size: 16px;"><b>其他</b></span></li>
+                    <ul>
+                      <li><span style="font-size: 16px;">程式設計 (一)：100</span></li>
+                      <li><span style="font-size: 16px;">程式設計 (二)：100</span></li>
+                      <li><span style="font-size: 16px;">視窗程式設計：100</span></li>
+                      <li><span style="font-size: 16px;">計算機概論：88</span></li>
+                      <li><span style="font-size: 16px;">資料結構：85</span><br></li>
+                    </ul>
+                  </ul>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-experiences-013">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1><b style="color: rgb(149, 87, 5);">幹部經驗</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.08 - 2017.07&nbsp; &nbsp;元智大學資訊研究社 (ITAC)　4th 社長</b></h3>
+                <div style="font-size: 16px;">對我來說，擔任社長是一個「回饋學弟妹」的經歷。自大一進入資訊研究社，沿路上受到許多學長姐們的幫助，他們從不因新社員經歷不足而看不起我們，而是只要擁有前進的心，就會盡可能的提供資源給予社員，因此在
+                  ITAC 的期間我累積了不少能力。當上社長後，就是以「回饋」的心招募新社員，指引他們的方向。<b><br></b></div>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.06 - 2017.05&nbsp; &nbsp;元智大學資管系系學會　副學術長</b></h3>
+                <p>擔任社長期間，同時我也兼任了系學會幹部。系學會的經營方式跟社團不太一樣，屬於目標導向，自由度比較低，行事必須更加慎重。我們會有定期會議、更加繁複的社團和學校行政、反覆的內部溝通，確保做出最佳選擇，讓系上同學獲得最好的利益。進入系學會以後，才發現辦好一個看似簡單的活動，背後的付出比想像中還要龐大許多。</p>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.03&nbsp; &nbsp;元智大學 2017 資訊週　副總召</b></h3>
+                <p>擔任資管系學會學術最重要的工作就是舉辦資訊週。「資訊週」是資訊學院於校慶月舉辦的周系列活動，是資管、資工、資傳三系與資訊學院共同主辦，擁有豐富的活動，如歌唱、程設、球類比賽，非常多元。擔任副總召必須精確掌握行政、財務、各系聯絡溝通......等事務的進度與情況，非常不容易。這段期間內，我們曾經因雙方資訊不對稱而出現誤會，當時緊急整理所有資料，召開臨時會議，避免錯誤持續擴大。</p>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.07 - 2018.06 &nbsp; 元智大學男二宿　網管</b></h3>
+                <p>宿舍網管是資服處與住宿生的溝通橋梁，當住宿生有任何網路問題時，網管必須協助解決，或是尋找並通報問題所在。擔任宿舍網管的這段期間，我增加了許多錯誤處理的經驗，遇到問題能更快速反應、解決。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-experiences-013">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1><b style="color: rgb(149, 87, 5);">工作經驗</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2015.07 - 2015.08, 2016.11&nbsp; &nbsp;中央研究院　實習生</b></h3>
+                <p>第一次的工作經驗是高中畢業的暑假，我進入中研院擔任老師的幫手。當時主要協助康熙字典整理，拆解文字、統計、和校閱。第一次工作有些生疏，花了一個月與老師溝通，習慣以後便得心應手。在這次的工作中，我學到了與上司溝通的技巧，有問題一定要問，以免產出與上司預想的不同。</p>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.10 - 2018.01&nbsp; &nbsp;元智大學資管系　資訊通識助教</b></h3>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2018.02 - 現在</b>&nbsp; &nbsp;<b>精藤股份有限公司</b><span style="font-family: 'open sans', 'pingfang tc', 'microsoft jhenghei', pmingliu, sans-serif; font-size: 14px;">　</span><b
+                    style="color: inherit; letter-spacing: 0px;">實習生</b></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-experiences-013">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1><b style="color: rgb(149, 87, 5);">參與活動</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b> 2015.12.26&nbsp; &nbsp;Hackathon Taiwan 第十四次 十二月主場</b></h3>
+                <p>第一次體驗在外比賽的氣氛，雖然最後的成品跟其他組比起來遜色許多，不過與小組合作的過程中，學到了寫程式如何分工、討論。</p>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b> 2016.02.27&nbsp; &nbsp;SITCON 2016</b></h3>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.08.20&nbsp; &nbsp;COSCUP 2016</b><br></h3>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.03.18&nbsp; &nbsp;SITCON 2017</b><br></h3>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.08.05&nbsp; &nbsp;COSCUP 2017</b><br></h3>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.09－2018.01 元智 1003 電腦建置、部署與管理</b></h3>
+                <div><span style="font-size: 16px;">負責：電腦全新安裝、(有線/無線) 網路規劃、AD 建置、電腦維護</span></div>
+              </div>
+            </div>
+            <div class="row" title="" style="display: block;">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2017.11.04&nbsp; &nbsp;2017 第 22 屆全國大專校院資訊應用服務創新競賽&nbsp;</b></h3>
+                <div style="font-size: 16px;">獲得桃園開放資料創新應用組 佳作<br></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-experiences-013">
+          <div class="col-xs-12">
+            <div class="row">
+              <div class="col-xs-12">
+                <h1><b style="letter-spacing: 0px; color: rgb(149, 87, 5);">營隊經驗</b><br></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.07 - 2016.08&nbsp; &nbsp;元智大學三系聯合迎新</b></h3>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-xs-2 col-sm-1 item-bullet"></div>
+              <div class="col-xs-10 col-sm-11 item">
+                <h3><b>2016.11&nbsp; &nbsp;元智大學資管系宿營</b></h3>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-features-001">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1><b style="color: rgb(149, 87, 5);">作品集</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-sm-12 item">
+                <ul style="line-height: 28px;">
+                  <li><b><span style="font-size: 20px;">網頁相關：</span></b><br></li>
+                  <ul style="line-height: 28px;">
+                    <li><span style="font-size: 16px;">大一網頁設計概論課程：<u>https://github.com/Oschangkai/104Web.project&nbsp;</u></span></li>
+                    <li><span style="font-size: 16px;">元智資訊研究社 官網：<u>https://github.com/Oschangkai/itac</u></span></li>
+                    <li><span style="font-size: 16px;">元智資訊研究社 萬國博覽會遊戲：<u>https://github.com/Oschangkai/98wanguo_Frontend&nbsp;</u></span></li>
+                    <li><span style="font-size: 16px;">三系迎新官網：<u>https://github.com/Oschangkai/yzu2016camp</u></span></li>
+                    <li><span style="font-size: 16px;">大二資料庫管理 (ASP.NET MVC)：<u>https://github.com/Oschangkai/YZU_Course_Info</u></span></li>
+                    <li><span style="font-size: 16px;">資服創新競賽 - 憩桃 Web 端 (React.js)： <u>https://github.com/Oschangkai/Triptao-Web</u></span></li>
+                  </ul>
+                  <li><span style="font-size: 16px;"><b style="font-size: 20px;">爬蟲相關：</b></span></li>
+                  <ul>
+                    <li><span style="font-size: 16px;">各式爬蟲 (Python)：<u>https://github.com/Oschangkai/Crawler</u></span></li>
+                    <li><span style="font-size: 16px;">政府開放資料 KMZ 轉 TXT (Python)：<u>https://github.com/Oschangkai/kmz2txt</u></span></li>
+                  </ul>
+                </ul>
+                <p></p>
+                <p></p>
+                <ul>
+                  <li><b style="font-size: 20px;">其他：&nbsp;</b><br></li>
+                  <ul style="line-height: 28px;">
+                    <li><span style="font-size: 16px;">Telegram 聊天機器人：<u>https://github.com/Oschangkai/Telebot</u></span></li>
+                    <li><span style="font-size: 16px;">元智大學小工具 (Batchfile)：<u>https://github.com/Oschangkai/yzuTool</u></span></li>
+                  </ul>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row snippet-features-001">
+          <div class="col-sm-12">
+            <div class="row">
+              <div class="col-sm-12">
+                <h1><b style="color: rgb(149, 87, 5);">人格特質與興趣</b></h1>
+              </div>
+            </div>
+            <div class="row" title="">
+              <div class="col-sm-12 item">
+                <p></p>
+                <ul style="line-height: 28px;">
+                  <li><span style="font-size: 16px;"><b>不怕嘗試新事物：</b>在大學期間基於興趣之下開發過多種小專案，也因此學習了各種程式語言。其中，摸索新語言難免會遇到困難，不過也因為自己對新事物的好奇心的特質，一一克服了。<br></span></li>
+                  <li><span style="font-size: 16px;"><b>實作 &gt; 理論：</b>對我來說，理論不容易理解，實作才能快速的學習。因此在大學期間，當有任何新想法，我就會動手嘗試實現。雖然花費不少時間在自學新事物，但有著完成作品的喜悅感，學習的疲累就不算甚麼了，更是往後學習的動力所在。</span></li>
+                  <li><span style="font-size: 16px;"><b>負責任：</b>喜歡嘗試新事物的我，擔任過不同幹部，也有不同的打工經驗。不管是前者或後者，我都會將交代的事物處理得盡善盡美，也因此在中研院實習時獲得教授對我工作態度的肯定。&nbsp;<br></span></li>
+                  <li><span style="font-size: 16px;"><b>守時：</b>不論是上課、上班、做任何事情，我會習慣「提早準備」。在最後一刻處理事情總是讓我措手不及，因此養成了上課提早到校、事情提早開始的習慣，間接的也變得守時。&nbsp;</span></li>
+                  <li><span style="font-size: 16px;"><b>對於「網路」相關技術有極大興趣：</b>網路的知識非常廣泛，為了補足相關技能，跨系加簽了資工系的課程，學習
+                      CCNA。在閒餘時間，我也會自行摸索這領域的其他事物，如爬蟲、RESTful API 服務架設，拓展技能廣度。</span></li>
+                </ul>
+                <p></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="powered-by-cakeresume powered-by-cakeresume-label">
+          Edited on 2018. Powered By CakeResume.
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Remove all global properties set by addthis, otherwise it won't reinitialize.
+    if (window.addthis) {
+      window.addthis = null;
+      window._adr = null;
+      window._atc = null;
+      window._atd = null;
+      window._ate = null;
+      window._atr = null;
+      window._atw = null;
+    }
+  </script>
+
+
+  <!-- This line most be placed after loading Mixpane and Cookies -->
+  <!-- Require Mixpanel and cookies-js -->
+
+  <script>
+    // Track first/last touch UTM tags with Mixpanel and Cookie
+    (function () {
+      function getQueryParam(url, param) {
+        // Expects a raw URL
+        param = param.replace(/[[]/, "\[").replace(/[]]/, "\]");
+        var regexS = "[\?&]" + param + "=([^&#]*)",
+          regex = new RegExp(regexS),
+          results = regex.exec(url);
+        if (results === null || (results && typeof (results[1]) !== 'string' && results[1].length)) {
+          return '';
+        } else {
+          return decodeURIComponent(results[1]).replace(/\W/gi, ' ');
+        }
+      }
+
+      function campaignParams() {
+        var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' '),
+          kw = '',
+          utmKey = '',
+          params = {},
+          firstParams = {};
+
+        var index;
+        for (index = 0; index < campaign_keywords.length; ++index) {
+          kw = getQueryParam(document.URL, campaign_keywords[index]);
+          if (kw.length) {
+            utmKey = campaign_keywords[index] + '_last_touch';
+            params[utmKey] = kw;
+            // Keep last-touch UTM value in cookies.
+            Cookies.set(utmKey, kw, {
+              expires: 365
+            });
+          }
+        }
+        for (index = 0; index < campaign_keywords.length; ++index) {
+          kw = getQueryParam(document.URL, campaign_keywords[index]);
+          if (kw.length) {
+            utmKey = campaign_keywords[index] + '_first_touch';
+            firstParams[utmKey] = kw;
+            // Keep first-touch UTM value in cookies if not yet exist.
+            if (!Cookies.get(utmKey)) {
+              Cookies.set(utmKey, kw, {
+                expires: 365
+              });
+            }
+          }
+        }
+
+        mixpanel.people.set_once(firstParams);
+        mixpanel.register_once(firstParams);
+        mixpanel.people.set(params);
+        mixpanel.register(params);
+      }
+
+      campaignParams();
+    })();
+  </script>
+</body>
+
+</html>
