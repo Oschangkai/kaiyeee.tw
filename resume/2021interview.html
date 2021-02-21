@@ -7,7 +7,6 @@
   <script src="./assets/nr-1071.min.js"></script>
   <script type="text/javascript" async="" src="./assets/runtime.2.10.0.1.js"></script>
   <script async="" src="./assets/script.js"></script>
-  <script type="text/javascript" async="" src="./assets/mixpanel-2-latest.min.js"></script>
   <script type="text/javascript">
     window.NREUM || (NREUM = {});
     NREUM.info = {
@@ -288,7 +287,6 @@
   <meta property="og:title" content="KaiYi's Resume">
   <meta property="og:description" content="目前是精藤股份有限公司的實習生，負責電腦維修，並同時學習網路規劃。">
   <meta property="og:type" content="profile">
-  <meta property="fb:app_id" content="1082948111745623">
   <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="KaiYi's Resume">
   <meta name="twitter:description" content="目前是精藤股份有限公司的實習生，負責電腦維修，並同時學習網路規劃。">
@@ -299,132 +297,6 @@
   <script src="./assets/contentarea-aaf3649b99bea8faee3dffc363079c4d7de7ee8c34c5947c03ac7ac0e467a5a7.js"
     data-turbolinks-track="true"></script>
   <!--[if lt IE 9]><script src="https://html5shim.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
-  <!-- Mixpanel -->
-  <script type="text/javascript">
-    (function (e, a) {
-      if (!a.__SV) {
-        var b = window;
-        try {
-          var c, l, i, j = b.location,
-            g = j.hash;
-          c = function (a, b) {
-            return (l = a.match(RegExp(b + "=([^&]*)"))) ? l[1] : null
-          };
-          g && c(g, "state") && (i = JSON.parse(decodeURIComponent(c(g, "state"))), "mpeditor" === i.action && (b.sessionStorage
-            .setItem("_mpcehash", g), history.replaceState(i.desiredHash || "", e.title, j.pathname + j.search)))
-        } catch (m) {}
-        var k, h;
-        window.mixpanel = a;
-        a._i = [];
-        a.init = function (b, c, f) {
-          function e(b, a) {
-            var c = a.split(".");
-            2 == c.length && (b = b[c[0]], a = c[1]);
-            b[a] = function () {
-              b.push([a].concat(Array.prototype.slice.call(arguments,
-                0)))
-            }
-          }
-          var d = a;
-          "undefined" !== typeof f ? d = a[f] = [] : f = "mixpanel";
-          d.people = d.people || [];
-          d.toString = function (b) {
-            var a = "mixpanel";
-            "mixpanel" !== f && (a += "." + f);
-            b || (a += " (stub)");
-            return a
-          };
-          d.people.toString = function () {
-            return d.toString(1) + ".people (stub)"
-          };
-          k =
-            "disable time_event track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config reset people.set people.set_once people.increment people.append people.union people.track_charge people.clear_charges people.delete_user"
-            .split(" ");
-          for (h = 0; h < k.length; h++) e(d, k[h]);
-          a._i.push([b, c, f])
-        };
-        a.__SV = 1.2;
-        b = e.createElement("script");
-        b.type = "text/javascript";
-        b.async = !0;
-        b.src = "undefined" !== typeof MIXPANEL_CUSTOM_LIB_URL ? MIXPANEL_CUSTOM_LIB_URL : "file:" === e.location.protocol &&
-          "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js".match(/^\/\//) ?
-          "https://cdn.mxpnl.com/libs/mixpanel-2-latest.min.js" : "//cdn.mxpnl.com/libs/mixpanel-2-latest.min.js";
-        c = e.getElementsByTagName("script")[0];
-        c.parentNode.insertBefore(b, c)
-      }
-    })(document, window.mixpanel || []);
-    mixpanel.init("9cd3a919409eb3bd2aa39f8c634df985");
-  </script>
-  <!-- End Mixpanel -->
-
-
-  <!-- My Segment -->
-  <script type="text/javascript">
-    (function (window) {
-      var keyMap, segmentTraitsToMixpanel;
-
-      keyMap = {
-        created: '$created',
-        email: '$email',
-        firstName: '$first_name',
-        lastName: '$last_name',
-        name: '$name',
-        username: '$username',
-        phone: '$phone',
-        unsubscribed: '$unsubscribed',
-      };
-
-      segmentTraitsToMixpanel = function (dict) {
-        return _.reduce(dict, function (newDict, val, oldKey) {
-          var newKey;
-          newKey = keyMap[oldKey] || oldKey;
-          newDict[newKey] = val;
-          return newDict;
-        }, {});
-      };
-
-      window.analytics = {
-        identify: function (userId, traits) {
-          if (traits == null) {
-            traits = {};
-          }
-          mixpanel.identify(userId);
-          mixpanel.people.set(segmentTraitsToMixpanel(traits));
-          ga('set', 'userId', userId);
-        },
-        alias: function (userId) {
-          mixpanel.alias(userId);
-        },
-        track: function (event, properties) {
-          mixpanel.track(event, properties);
-
-          // ga
-          if (properties.nonInteraction) {
-            ga('send', 'event', properties.category, event, properties.label, properties.value, {
-              nonInteraction: 1
-            });
-          } else {
-            ga('send', 'event', properties.category, event, properties.label, properties.value);
-          }
-
-          // fbq
-          if (event == 'Complete registration') {
-            // Track standard event.
-            fbq('track', 'CompleteRegistration', properties)
-          } else {
-            // Track custom event.
-            fbq('trackCustom', event, properties)
-          }
-        },
-        page: function () {
-          mixpanel.track('Loaded a Page');
-          ga('send', 'pageview');
-          fbq('track', 'PageView');
-        }
-      };
-    })(window);
-  </script>
 
   <style type="text/css">
     @font-face {
@@ -1790,69 +1662,6 @@
       window._atr = null;
       window._atw = null;
     }
-  </script>
-
-
-  <!-- This line most be placed after loading Mixpane and Cookies -->
-  <!-- Require Mixpanel and cookies-js -->
-
-  <script>
-    // Track first/last touch UTM tags with Mixpanel and Cookie
-    (function () {
-      function getQueryParam(url, param) {
-        // Expects a raw URL
-        param = param.replace(/[[]/, "\[").replace(/[]]/, "\]");
-        var regexS = "[\?&]" + param + "=([^&#]*)",
-          regex = new RegExp(regexS),
-          results = regex.exec(url);
-        if (results === null || (results && typeof (results[1]) !== 'string' && results[1].length)) {
-          return '';
-        } else {
-          return decodeURIComponent(results[1]).replace(/\W/gi, ' ');
-        }
-      }
-
-      function campaignParams() {
-        var campaign_keywords = 'utm_source utm_medium utm_campaign utm_content utm_term'.split(' '),
-          kw = '',
-          utmKey = '',
-          params = {},
-          firstParams = {};
-
-        var index;
-        for (index = 0; index < campaign_keywords.length; ++index) {
-          kw = getQueryParam(document.URL, campaign_keywords[index]);
-          if (kw.length) {
-            utmKey = campaign_keywords[index] + '_last_touch';
-            params[utmKey] = kw;
-            // Keep last-touch UTM value in cookies.
-            Cookies.set(utmKey, kw, {
-              expires: 365
-            });
-          }
-        }
-        for (index = 0; index < campaign_keywords.length; ++index) {
-          kw = getQueryParam(document.URL, campaign_keywords[index]);
-          if (kw.length) {
-            utmKey = campaign_keywords[index] + '_first_touch';
-            firstParams[utmKey] = kw;
-            // Keep first-touch UTM value in cookies if not yet exist.
-            if (!Cookies.get(utmKey)) {
-              Cookies.set(utmKey, kw, {
-                expires: 365
-              });
-            }
-          }
-        }
-
-        mixpanel.people.set_once(firstParams);
-        mixpanel.register_once(firstParams);
-        mixpanel.people.set(params);
-        mixpanel.register(params);
-      }
-
-      campaignParams();
-    })();
   </script>
 </body>
 
