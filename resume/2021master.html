@@ -4,7 +4,6 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <script type="text/javascript" async="" src="./assets/runtime.2.10.0.1.js"></script>
   <script async="" src="./assets/script.js"></script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -20,7 +19,7 @@
   <meta name="twitter:title" content="KaiYi's Resume">
   <meta name="twitter:description" content="目前是緯謙科技的軟體工程師，負責雲端軟體開發、DevOps 工程師">
   <link rel="stylesheet" media="screen" href="./assets/fonts.css">
-  <link rel="stylesheet" media="all" href="./assets/main-561d483b84966d1d267c4e1dfc5b890534e369e6c88838b1503efdb2cafef80c.css"
+  <link rel="stylesheet" media="all" href="./assets/main-ee6cff8deb9f7a21f164aa95dece488c7b42f289465c523c142b2373e1f5aa2a.css"
         data-turbolinks-track="true">
 
   <script src="./assets/contentarea-aaf3649b99bea8faee3dffc363079c4d7de7ee8c34c5947c03ac7ac0e467a5a7.js"
@@ -1083,11 +1082,40 @@
 </head><span id="warning-container"><i data-reactroot=""></i></span>
 
 <body class="is-owner paper-style" id="items-show">
+<!-- body class="connected-with-posts" => 顯示 tab 開關 -->
+<!-- body class: paper-style, web-style => 網頁/紙張版 -->
+<!-- body class: normal-spacing, condensed-spacing => 一般/密集模式 -->
+<!-- body class: view-tablet, view-mobile => view as device -->
+
   <div class="container-main container">
+
+    <!-- Header -->
+    <header class="header-item a4-width">
+      <div class="row">
+        <div class="col-xs-8">
+          <!-- Tabs -->
+          <div class="navs">
+            <a class="text-muted" href="../">首頁</a>
+            <a class="text-muted active" href="./">履歷</a>
+            <a class="text-muted" href="../#work">作品集</a>
+          </div>
+        </div>
+        <div class="col-xs-4 text-right header-toolbar">
+          <a class="text-muted" onclick="print();" role="button">
+            <i class="fa fa-print"></i></a>
+        </div>
+      </div>
+      <div class="row"><div class="col-md-12"><hr></div>
+      </div>
+    </header>
+
+    <!-- Misc -->
     <div id="alerts"></div>
     <div id="global-status-container">
       <div id="global-status"></div>
     </div>
+
+    <!-- Resume -->
     <div class="item-page">
       <div class="contentarea" id="item" notranslate="">
 
@@ -1395,11 +1423,15 @@
         </div>
 
         <!-- Powered By -->
-        <div class="powered-by-cakeresume powered-by-cakeresume-label">
+        <div class="powered-by-cakeresume powered-by-cakeresume-label text-muted">
           Edited on 2021. Powered By CakeResume.
         </div>
+
       </div>
     </div>
+
+    <!-- Floating bottom right -->
+    <div class="hidden-xs" id="item-rwd-picker" style="display: none"></div>
   </div>
 </body>
 

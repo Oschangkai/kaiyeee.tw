@@ -4,7 +4,6 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta content="IE=edge" http-equiv="X-UA-Compatible">
-  <script type="text/javascript" async="" src="./assets/runtime.2.10.0.1.js"></script>
   <script async="" src="./assets/script.js"></script>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta name="msapplication-TileColor" content="#da532c">
@@ -20,7 +19,7 @@
   <meta name="twitter:title" content="KaiYi's Resume">
   <meta name="twitter:description" content="目前是緯謙科技的軟體工程師，負責雲端軟體開發、DevOps 工程師">
   <link rel="stylesheet" media="screen" href="./assets/fonts.css">
-  <link rel="stylesheet" media="all" href="./assets/main-561d483b84966d1d267c4e1dfc5b890534e369e6c88838b1503efdb2cafef80c.css"
+  <link rel="stylesheet" media="all" href="./assets/main-ee6cff8deb9f7a21f164aa95dece488c7b42f289465c523c142b2373e1f5aa2a.css"
         data-turbolinks-track="true">
 
   <script src="./assets/contentarea-aaf3649b99bea8faee3dffc363079c4d7de7ee8c34c5947c03ac7ac0e467a5a7.js"
@@ -1082,12 +1081,41 @@
   <link href="./assets/css" rel="stylesheet">
 </head><span id="warning-container"><i data-reactroot=""></i></span>
 
-<body class="is-owner paper-style" id="items-show">
+<body class="is-owner paper-style connected-with-posts" id="items-show">
+<!-- body class="connected-with-posts" => 顯示 tab 開關 -->
+<!-- body class: paper-style, web-style => 網頁/紙張版 -->
+<!-- body class: normal-spacing, condensed-spacing => 一般/密集模式 -->
+<!-- body class: view-tablet, view-mobile => view as device -->
+
 <div class="container-main container">
+
+  <!-- Header -->
+  <header class="header-item a4-width">
+    <div class="row">
+      <div class="col-xs-8">
+        <!-- Tabs -->
+        <div class="navs">
+          <a class="text-muted" href="../">首頁</a>
+          <a class="text-muted active" href="./">履歷</a>
+          <a class="text-muted" href="../#work">作品集</a>
+        </div>
+      </div>
+      <div class="col-xs-4 text-right header-toolbar">
+        <a class="text-muted" onclick="print();" role="button">
+          <i class="fa fa-print"></i></a>
+      </div>
+    </div>
+    <div class="row"><div class="col-md-12"><hr></div>
+    </div>
+  </header>
+
+  <!-- Misc -->
   <div id="alerts"></div>
   <div id="global-status-container">
     <div id="global-status"></div>
   </div>
+
+  <!-- Resume -->
   <div class="item-page">
     <div class="contentarea" id="item" notranslate="">
 
@@ -1119,58 +1147,10 @@
             <div class="col-sm-12 item">
               <p></p>
               <ul style="line-height: 28px;">
-                <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">作業系統：</b>Windows, Windows Server,
-                      Linux, macOS</span></li>
-                <li style="font-size: 16px;"><b>程式語言：</b><span style="font-size: 16px;">C++, C#, ASP.NET, Python,
-                      Javascript (React.js, Vue.js), PHP (不熟)</span></li>
-                <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">資料庫：</b>MS SQL, MariaDB (MySQL)</span></li>
-                <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">PaaS 服務使用經驗：</b><span style="font-size: 16px;">Heroku,
-                      Openshift</span></li>
-                <li><span style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">虛擬化軟體：</b>VMware Workstation /
-                      ESXi / Fusion, Microsoft Hyper-V&nbsp;</span><br></li>
-                <li style="font-size: 16px;"><span style="font-size: 16px;"><b>其他：</b>Git 版控、硬體組裝 / 測試 / 除錯、簡易網路規劃 /
-                      架設、網站維護 / 架設<br></span></li>
-              </ul>
-              <p></p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature Section -->
-      <div class="row snippet-features-001">
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1><b style="color: rgb(149, 87, 5);">教育狀況</b></h1>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-sm-12 item">
-              <ul style="line-height: 28px;">
-                <li><span style="font-size: 16px;">2015 年 9 月－目前　元智大學資管系三年級<br></span></li>
-                <li><span style="font-size: 16px;">平均成績：80 ，約在班排名前 9%<br></span></li>
-                <ul>
-                  <li><span style="font-size: 16px;"><b>Web 相關</b><br></span></li>
-                  <ul>
-                    <li><span style="font-size: 16px;">網頁設計概論：99</span></li>
-                    <li><span style="font-size: 16px;">網際網路程式設計：93</span></li>
-                    <li><span style="font-size: 16px;">資料庫管理：80<br></span></li>
-                  </ul>
-                  <li><span style="font-size: 16px;"><b>網路相關 (CCNA)</b><br></span></li>
-                  <ul>
-                    <li><span style="font-size: 16px;">資訊網路：95</span></li>
-                    <li><span style="font-size: 16px;">網路實習 (一)：90<br></span></li>
-                  </ul>
-                  <li><span style="font-size: 16px;"><b>其他</b></span></li>
-                  <ul>
-                    <li><span style="font-size: 16px;">程式設計 (一)：100</span></li>
-                    <li><span style="font-size: 16px;">程式設計 (二)：100</span></li>
-                    <li><span style="font-size: 16px;">視窗程式設計：100</span></li>
-                    <li><span style="font-size: 16px;">計算機概論：88</span></li>
-                    <li><span style="font-size: 16px;">資料結構：85</span><br></li>
-                  </ul>
-                </ul>
+                <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">網頁前端開發：</b>Vue.js (with Ant Design), Angular</li>
+                <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">DevOps：</b>Azure DevOps</li>
+                <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">雲端服務：</b>Azure Cloud 開發,  MS 365 應用開發</li>
+                <li style="font-size: 16px;"><b style="color: rgb(0, 0, 0);">其他：</b>Git Flow 開發、簡易網路規劃 / 架設<br></li>
               </ul>
               <p></p>
             </div>
@@ -1183,223 +1163,92 @@
         <div class="col-xs-12">
           <div class="row">
             <div class="col-xs-12">
-              <h1><b style="color: rgb(149, 87, 5);">幹部經驗</b></h1>
+              <h1><b style="color: rgb(149, 87, 5);">工作經歷</b></h1>
             </div>
           </div>
           <div class="row" title="">
             <div class="col-xs-2 col-sm-1 item-bullet"></div>
             <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.08 - 2017.07&nbsp; &nbsp;元智大學資訊研究社 (ITAC)　4th 社長</b></h3>
-              <div style="font-size: 16px;">對我來說，擔任社長是一個「回饋學弟妹」的經歷。自大一進入資訊研究社，沿路上受到許多學長姐們的幫助，他們從不因新社員經歷不足而看不起我們，而是只要擁有前進的心，就會盡可能的提供資源給予社員，因此在
-                ITAC 的期間我累積了不少能力。當上社長後，就是以「回饋」的心招募新社員，指引他們的方向。<b><br></b></div>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.06 - 2017.05&nbsp; &nbsp;元智大學資管系系學會　副學術長</b></h3>
-              <p>擔任社長期間，同時我也兼任了系學會幹部。系學會的經營方式跟社團不太一樣，屬於目標導向，自由度比較低，行事必須更加慎重。我們會有定期會議、更加繁複的社團和學校行政、反覆的內部溝通，確保做出最佳選擇，讓系上同學獲得最好的利益。進入系學會以後，才發現辦好一個看似簡單的活動，背後的付出比想像中還要龐大許多。</p>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.03&nbsp; &nbsp;元智大學 2017 資訊週　副總召</b></h3>
-              <p>擔任資管系學會學術最重要的工作就是舉辦資訊週。「資訊週」是資訊學院於校慶月舉辦的周系列活動，是資管、資工、資傳三系與資訊學院共同主辦，擁有豐富的活動，如歌唱、程設、球類比賽，非常多元。擔任副總召必須精確掌握行政、財務、各系聯絡溝通......等事務的進度與情況，非常不容易。這段期間內，我們曾經因雙方資訊不對稱而出現誤會，當時緊急整理所有資料，召開臨時會議，避免錯誤持續擴大。</p>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.07 - 2018.06 &nbsp; 元智大學男二宿　網管</b></h3>
-              <p>宿舍網管是資服處與住宿生的溝通橋梁，當住宿生有任何網路問題時，網管必須協助解決，或是尋找並通報問題所在。擔任宿舍網管的這段期間，我增加了許多錯誤處理的經驗，遇到問題能更快速反應、解決。</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="row snippet-experiences-013">
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1><b style="color: rgb(149, 87, 5);">工作經驗</b></h1>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2015.07 - 2015.08, 2016.11&nbsp; &nbsp;中央研究院　實習生</b></h3>
-              <p>第一次的工作經驗是高中畢業的暑假，我進入中研院擔任老師的幫手。當時主要協助康熙字典整理，拆解文字、統計、和校閱。第一次工作有些生疏，花了一個月與老師溝通，習慣以後便得心應手。在這次的工作中，我學到了與上司溝通的技巧，有問題一定要問，以免產出與上司預想的不同。</p>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.10 - 2018.01&nbsp; &nbsp;元智大學資管系　資訊通識助教</b></h3>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2018.02 - 現在</b>&nbsp; &nbsp;<b>精藤股份有限公司</b><span style="font-family: 'open sans', 'pingfang tc', 'microsoft jhenghei', pmingliu, sans-serif; font-size: 14px;">　</span><b
-                      style="color: inherit; letter-spacing: 0px;">實習生</b></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="row snippet-experiences-013">
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1><b style="color: rgb(149, 87, 5);">參與活動</b></h1>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b> 2015.12.26&nbsp; &nbsp;Hackathon Taiwan 第十四次 十二月主場</b></h3>
-              <p>第一次體驗在外比賽的氣氛，雖然最後的成品跟其他組比起來遜色許多，不過與小組合作的過程中，學到了寫程式如何分工、討論。</p>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b> 2016.02.27&nbsp; &nbsp;SITCON 2016</b></h3>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.08.20&nbsp; &nbsp;COSCUP 2016</b><br></h3>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.03.18&nbsp; &nbsp;SITCON 2017</b><br></h3>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.08.05&nbsp; &nbsp;COSCUP 2017</b><br></h3>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.09－2018.01 元智 1003 電腦建置、部署與管理</b></h3>
-              <div><span style="font-size: 16px;">負責：電腦全新安裝、(有線/無線) 網路規劃、AD 建置、電腦維護</span></div>
-            </div>
-          </div>
-          <div class="row" title="" style="display: block;">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2017.11.04&nbsp; &nbsp;2017 第 22 屆全國大專校院資訊應用服務創新競賽&nbsp;</b></h3>
-              <div style="font-size: 16px;">獲得桃園開放資料創新應用組 佳作<br></div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Experience Section -->
-      <div class="row snippet-experiences-013">
-        <div class="col-xs-12">
-          <div class="row">
-            <div class="col-xs-12">
-              <h1><b style="letter-spacing: 0px; color: rgb(149, 87, 5);">營隊經驗</b><br></h1>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.07 - 2016.08&nbsp; &nbsp;元智大學三系聯合迎新</b></h3>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-xs-2 col-sm-1 item-bullet"></div>
-            <div class="col-xs-10 col-sm-11 item">
-              <h3><b>2016.11&nbsp; &nbsp;元智大學資管系宿營</b></h3>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Feature Section -->
-      <div class="row snippet-features-001">
-        <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1><b style="color: rgb(149, 87, 5);">作品集</b></h1>
-            </div>
-          </div>
-          <div class="row" title="">
-            <div class="col-sm-12 item">
-              <ul style="line-height: 28px;">
-                <li><b><span style="font-size: 20px;">網頁相關：</span></b><br></li>
-                <ul style="line-height: 28px;">
-                  <li><span style="font-size: 16px;">大一網頁設計概論課程：<u>https://github.com/Oschangkai/104Web.project&nbsp;</u></span></li>
-                  <li><span style="font-size: 16px;">元智資訊研究社 官網：<u>https://github.com/Oschangkai/itac</u></span></li>
-                  <li><span style="font-size: 16px;">元智資訊研究社 萬國博覽會遊戲：<u>https://github.com/Oschangkai/98wanguo_Frontend&nbsp;</u></span></li>
-                  <li><span style="font-size: 16px;">三系迎新官網：<u>https://github.com/Oschangkai/yzu2016camp</u></span></li>
-                  <li><span style="font-size: 16px;">大二資料庫管理 (ASP.NET MVC)：<u>https://github.com/Oschangkai/YZU_Course_Info</u></span></li>
-                  <li><span style="font-size: 16px;">資服創新競賽 - 憩桃 Web 端 (React.js)： <u>https://github.com/Oschangkai/Triptao-Web</u></span></li>
-                </ul>
-                <li><span style="font-size: 16px;"><b style="font-size: 20px;">爬蟲相關：</b></span></li>
-                <ul>
-                  <li><span style="font-size: 16px;">各式爬蟲 (Python)：<u>https://github.com/Oschangkai/Crawler</u></span></li>
-                  <li><span style="font-size: 16px;">政府開放資料 KMZ 轉 TXT (Python)：<u>https://github.com/Oschangkai/kmz2txt</u></span></li>
-                </ul>
-              </ul>
-              <p></p>
-              <p></p>
+              <h3><b>WiAdvance Technology Co., Senior Software Engineer, Jul 2019 ~ 現在</b></h3>
+              <p>以 Azure 為主，雲端軟體開發、SaaS 服務規劃<br>Azure DevOps CI/CD、MS365 API 開發</p>
               <ul>
-                <li><b style="font-size: 20px;">其他：&nbsp;</b><br></li>
-                <ul style="line-height: 28px;">
-                  <li><span style="font-size: 16px;">Telegram 聊天機器人：<u>https://github.com/Oschangkai/Telebot</u></span></li>
-                  <li><span style="font-size: 16px;">元智大學小工具 (Batchfile)：<u>https://github.com/Oschangkai/yzuTool</u></span></li>
+                <li>Web Front-end Development</li>
+                <ul>
+                  <li style="line-height: 24px">ETL System &amp; Report: 大量的圖表、自定義元件，呈現企業的資料 (Vue.js)</li>
+                  <li style="line-height: 24px">Dynamic Form Designer: 設計直覺的拖拉介面，供企業製作自己的表單，達到電子化表單 (Vue.js)</li>
+                  <li style="line-height: 24px">Construction Site Inspection App: 使用 PWA 完成跨平台 App 製作，可達成離線操作、上線同步資料，適用於網路收訊不好的工地區域 (Angular)</li>
+                </ul>
+                <li>DevOps</li>
+                <ul>
+                  <li style="line-height: 24px">Manufacturing Monitor System: A pure containerized system which can deploy whole services into cloud service (App Service, Azure Container Registry, Azure SQL ... etc) or local machines using Azure DevOps.</li>
+                  <li style="line-height: 24px">ETL System: Architect a reliable system on Azure Cloud and using Azure DevOps build &amp; deploy containerized services.</li>
+                </ul>
+                <li>Azure &amp; Microsoft 365</li>
+                <ul>
+                  <li style="line-height: 24px">Time Sheet Data ETL System: 利用 Azure Data Factory 撈取 MS365 上的資料並做簡單的資料處理，後續接續 Azure Functions 做最後的資料批次轉換，達成 (半) 自動化工時填表系統</li>
+                  <li style="line-height: 24px">Licensing Key Management &amp; Release: 使用 Azure，架構純 Serverless 的系統，其中使用到了 Logic Apps, Storage Account, API Management, Azure CDN, Azure Functions, Key Vault, Azure SQL.  (Angular)</li>
+                  <li style="line-height: 24px">Customer Billing ETL &amp; Data Visualization: 使用 Azure Data Factory 做 CSP 資料撈取、轉換、計算，後續再利用 Power BI 呈現客戶的用量報表，讓公司的業務可以方便地為客戶查帳，找出用量問題並提供建議</li>
+                  <li style="line-height: 24px">Teams App: 連接 Teams &amp; MS365 API 製作 Teams Bot, Teams Tab 等應用<br></li>
+                </ul>
+                <li>企業內部黑客松講師</li>
+                <ul>
+                  <li style="line-height: 24px">曾擔任遠傳、啟碁黑客松助教，緯創、非營利組織的 Power Platform 講師，入門 Power Platform 的課程</li>
                 </ul>
               </ul>
-              <p></p>
+            </div>
+          </div>
+          <div class="row" title="">
+            <div class="col-xs-2 col-sm-1 item-bullet"></div>
+            <div class="col-xs-10 col-sm-11 item">
+              <h3><b>精藤股份有限公司, MIS / SE Intern, Feb 2018 ~ Feb 2019</b></h3>
+              <p>使用者電腦環境維護與改善<br>網通設備設定與架設，如 Router,  Switch 的 HA 設定、區&amp;外網路規劃，多為 Cisco, Fortinet 設備。</p>
+              <ul>
+                <li style="line-height: 24px">全家機房見習</li>
+                <li style="line-height: 24px">精藤 Core Switch 更換計畫</li>
+                <li style="line-height: 24px">全網防火牆上架 &amp; 網路重新規劃 </li>
+                <li style="line-height: 24px">福比電腦設備規劃</li>
+                <li style="line-height: 24px">伺服器裝機</li>
+                <li style="line-height: 24px">全餐、全網、丸紅 OA 電腦問題排除</li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
-      <!-- Feature Section -->
-      <div class="row snippet-features-001">
+      <!-- Separator -->
+      <div class="row snippet-separator-001">
+        <div class="col-xs-12"><hr></div>
+      </div>
+
+      <!-- Profile Section -->
+      <div class="row snippet-profile-071">
         <div class="col-sm-12">
-          <div class="row">
-            <div class="col-sm-12">
-              <h1><b style="color: rgb(149, 87, 5);">人格特質與興趣</b></h1>
+          <h1><b>Oscar Chang</b></h1>
+          <p>目前是緯謙科技的軟體工程師，負責雲端軟體開發、兼任 DevOps 的工作<br></p>
+          <div class="edit">
+            <div class="social-links">
+              <a href="https://github.com/oschangkai" target="_blank" rel="nofollow noopener noreferrer"><i class="fab"></i></a>&nbsp;&nbsp;&nbsp;
+              <a href="http://linkedin.com/in/kaiyeee" target="_blank" rel="nofollow noopener noreferrer"><i class="fab"></i></a><br>
             </div>
           </div>
-          <div class="row" title="">
-            <div class="col-sm-12 item">
-              <p></p>
-              <ul style="line-height: 28px;">
-                <li><span style="font-size: 16px;"><b>不怕嘗試新事物：</b>在大學期間基於興趣之下開發過多種小專案，也因此學習了各種程式語言。其中，摸索新語言難免會遇到困難，不過也因為自己對新事物的好奇心的特質，一一克服了。<br></span></li>
-                <li><span style="font-size: 16px;"><b>實作 &gt; 理論：</b>對我來說，理論不容易理解，實作才能快速的學習。因此在大學期間，當有任何新想法，我就會動手嘗試實現。雖然花費不少時間在自學新事物，但有著完成作品的喜悅感，學習的疲累就不算甚麼了，更是往後學習的動力所在。</span></li>
-                <li><span style="font-size: 16px;"><b>負責任：</b>喜歡嘗試新事物的我，擔任過不同幹部，也有不同的打工經驗。不管是前者或後者，我都會將交代的事物處理得盡善盡美，也因此在中研院實習時獲得教授對我工作態度的肯定。&nbsp;<br></span></li>
-                <li><span style="font-size: 16px;"><b>守時：</b>不論是上課、上班、做任何事情，我會習慣「提早準備」。在最後一刻處理事情總是讓我措手不及，因此養成了上課提早到校、事情提早開始的習慣，間接的也變得守時。&nbsp;</span></li>
-                <li><span style="font-size: 16px;"><b>對於「網路」相關技術有極大興趣：</b>網路的知識非常廣泛，為了補足相關技能，跨系加簽了資工系的課程，學習
-                      CCNA。在閒餘時間，我也會自行摸索這領域的其他事物，如爬蟲、RESTful API 服務架設，拓展技能廣度。</span></li>
-              </ul>
-              <p></p>
-            </div>
-          </div>
+          <p>Front-end Developer, DevOps Engineer<br>Taipei City，TW</p>
+          <p><a href="mailto:oschangkai@gmail.com" target="_blank" rel="nofollow noopener noreferrer">oschangkai@gmail.com</a></p>
+          <p><a href="http://%20https://kaiyeee.tw/resume" target="_blank" rel="nofollow noopener noreferrer"><br></a></p>
+          <p><a href="https://kaiyeee.tw/resume/" target="_blank" rel="nofollow noopener noreferrer">https://kaiyeee.tw/resume</a></p>
+          <p><a href="https://github.com/Oschangkai" target="_blank" rel="nofollow noopener noreferrer">https://github.com/Oschangkai</a></p>
+          <p><a href="https://linkedin.com/in/kaiyeee" target="_blank" rel="nofollow noopener noreferrer">https://linkedin.com/in/kaiyeee</a></p>
         </div>
       </div>
 
       <!-- Powered By -->
-      <div class="powered-by-cakeresume powered-by-cakeresume-label">
+      <div class="powered-by-cakeresume powered-by-cakeresume-label text-muted">
         Edited on 2021. Powered By CakeResume.
       </div>
     </div>
   </div>
+
+  <!-- Floating bottom right -->
+  <div class="hidden-xs" id="item-rwd-picker" style="display: none"></div>
 </div>
 </body>
 
