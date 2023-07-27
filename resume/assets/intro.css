@@ -216,9 +216,6 @@ ul.experience-set {
 @page {
   size: A4 landscape; /* 混合使用 */
   margin: 0; /* 邊界與內容的距離 */
-  @bottom-center {
-    content: "Page " counter(page-number) " of " counter(pages);
-  }
 }
 div.page {
   counter-increment: page-number 1;
