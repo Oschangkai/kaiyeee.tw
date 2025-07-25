@@ -199,6 +199,13 @@ ul.link-set {
   font-weight: 600;
 }
 
+ul.experience-detail-set {
+  line-height: 1em;
+}
+.icon.inline {
+  vertical-align: middle;
+}
+
 @media screen and (max-width: 48em) {
 	.right, .left {
 		float: none;
